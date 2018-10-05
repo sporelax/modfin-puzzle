@@ -1,0 +1,9 @@
+{
+    "name": "Modfin-puzzle",
+    "author": "Per Lindblom",
+    "version": "1.0.0",
+    "dependencies": {
+      "jquery" : "^3.3.1",
+      "jsdom" : "^12.0.0"
+    }
+  }
