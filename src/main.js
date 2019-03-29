@@ -5,6 +5,8 @@ const { document } = (new JSDOM('')).window;
 global.document = document;
 var $ = jQuery = require('jquery')(window);
 
+//HOWTO: run with 'node src\main.js'
+
 //O(n^2) solution
 var handleResponse = function(data,status) {
     console.log(data.length);
@@ -69,11 +71,11 @@ function fInsert(val){
 
 function fPeek(){
     console.log("peek")
-    var val = -1;
     if (this.data.length > 0){
-        val = this.data[0]
+        return this.data[0]
+    }else{
+        throw console.error("Peek error, no data found in tree: " +JSON.stringify(this));
     }
-    return val
 }
 
 function fExtractTop(){
